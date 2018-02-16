@@ -14,13 +14,18 @@ public class Parser {
 		this.morseCode = new MorseCode();
 	}
 	
-	public static void parseCmd(String[] args) {
-		for(String x: args) {
-			
-		}
-	}
+	public void parseCmd(String[] args) {
+		for(String word: args) {				
+			if(word.compareTo(" ")==0) {
+				morseCode.appendString(" "); }
+			else { 
+				convertStringToCode(word);					//this will past each argument word of word and add additional spacing if not available
+				morseCode.appendString(" ");			
+				}
+		}//for
+	}//end of method
 
-	public static void parseUserInput(String userInput) {
+	public void parseUserInput(String userInput) {
 		
 		//ask user input
 		//store into String
@@ -28,11 +33,13 @@ public class Parser {
 	}
 	
 	//this allows the parser to return the morseCode Object
-	public MorseCode getMorseCode() {
-		return morseCode;
+	public String getMorseCode() {
+		return morseCode.getMorseCodeString();
 	}
 	
-	public void convertString(String str) {
+	//this will be parsing individual words
+	public void convertStringToCode(String str) {
+		//this is where the case statements go
 		
 	}
 	

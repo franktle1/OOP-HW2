@@ -11,18 +11,22 @@ public class MorseCodeDriver {
 		//args contains the command line args
 		//starts at [1]...
 		//if [1] is not null, ask user to receive input, else parse String[] args
+		MorseCodeGenerator r;
+		String userInput;
+		
+		//This may not be the best way to test it, but it'll serve as a placeholder for now
 		try {
-			System.out.println("First argument is :" + args[0]);}
-			//MorseCodeGenerator r = new MorseCodeGenerator(args);}
+			System.out.println("Receiving Command Line.\nFirst argument is : " + args[0]);
+			r = new MorseCodeGenerator(args);
+			System.out.println(r.getOutputString());
+			}
 		catch(ArrayIndexOutOfBoundsException e){
-			String userInput = JOptionPane.showInputDialog(null, "Enter a string you would like to parse.");
-			//MorseCodeGenerator r = new MorseCodeGenerator(userInput);
-			System.out.println("Hello");
-		}
-//		
-//		
-//		System.out.println("First argument is :" + args[0]);
-
+			System.out.println("Receiving input from user.");
+			userInput = JOptionPane.showInputDialog(null, "Enter a string you would like to parse.");
+			r = new MorseCodeGenerator(userInput);
+			System.out.println(r.getOutputString());
+			}	
+		
 	}
 	
 	

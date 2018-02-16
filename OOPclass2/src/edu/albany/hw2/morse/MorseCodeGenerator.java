@@ -6,23 +6,36 @@ public class MorseCodeGenerator {
 	private String outputString;
 	private Parser parser;
 	
-	//this will return the output
+	//this class will return the output
 	public MorseCodeGenerator(String[] inputArray) {
 		this.inputArray = inputArray;
-		outputString = new String("");} //points to nothing 
+		outputString = new String("");
+		callParser(); //sets the strings
+		} 
 	
 	public MorseCodeGenerator(String inputString) {
 		this.inputString = inputString;
-		outputString = new String("");} //points to nothing 
+		outputString = new String("");
+		callParser(); //sets the strings
+		} 
 	
 	private void callParser() {
 		parser = new Parser();
+		//parse input String
+		if(inputArray == null) {
+			parser.parseUserInput(inputString);
+			setOutputString(parser.getMorseCode());}
+		//parse array
+		else {
+			parser.parseCmd(inputArray);
+			setOutputString(parser.getMorseCode());
+		}	
 	}
 	
 	public String getOutputString() {
 		return outputString;}
 	
-	public void setOutputString(String outputString) {
+	private void setOutputString(String outputString) {
 		this.outputString = outputString;}
 	
 	

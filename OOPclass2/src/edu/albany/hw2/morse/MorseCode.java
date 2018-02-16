@@ -1,16 +1,18 @@
 package edu.albany.hw2.morse;
 
 public class MorseCode {
-	private String morseCode;
+	private StringBuffer sb;
 	
 	public MorseCode() {
-		morseCode = new String("");}
+		sb = new StringBuffer("");
+	}
 	
 	public void appendString(String str) {
-		this.morseCode += str;}
+		sb.append(str);
+	}
 	
-	public String getMorseCode() {
-		return morseCode;
+	public String getMorseCodeString() {
+		return sb.toString();
 	}
 	
 	
