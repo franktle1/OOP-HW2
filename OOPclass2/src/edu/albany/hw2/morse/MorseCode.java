@@ -7,8 +7,8 @@ public class MorseCode {
 		sb = new StringBuffer("");
 	}
 	
-	public void appendString(String str) {
-		sb.append(str);
+	public void appendString(Morse m) {
+		sb.append(m.getStrCode());
 	}
 	
 	public String getMorseCodeString() {
