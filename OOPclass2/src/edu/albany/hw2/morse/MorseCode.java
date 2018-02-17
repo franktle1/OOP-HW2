@@ -29,22 +29,6 @@ public class MorseCode {
 	public HashMap<String,String> getCodeMap(){
 		return codeMap;
 	}
-	
-
-	
-	
-	
+		
 }
 
-
-//public MorseCode() {
-//sb = new StringBuffer("");
-//}
-//
-//public void appendString(Morse m) {
-//sb.append(m.getStrCode());
-//}
-//
-//public String getMorseCodeString() {
-//return sb.toString();
-//}

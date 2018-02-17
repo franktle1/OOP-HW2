@@ -28,8 +28,7 @@ public class MorseCodeGenerator {
 		//parse array
 		else {
 			parser.parseCmd(inputArray);
-			setOutputString(parser.getMorseCode());
-		}	
+			setOutputString(parser.getMorseCode());}	
 	}
 	
 	public String getOutputString() {
